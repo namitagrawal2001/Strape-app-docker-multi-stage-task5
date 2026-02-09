@@ -1,3 +1,31 @@
+#🐳 Docker Setup (Added by Me)
+#📦 Project Description
+
+This project demonstrates how to containerize a Strapi application using a multi-stage Dockerfile and run it locally in production mode.
+
+🚀 Build Docker Image
+docker build -t strapi-app .
+
+▶️ Run Docker Container
+docker run --env-file .env -p 1337:1337 strapi-app
+
+🌐 Access the Application
+
+Open in browser:
+
+http://localhost:1337
+
+🔧 Dockerfile Explanation
+
+This project uses a multi-stage Dockerfile:
+
+The build stage installs all dependencies and builds the admin panel.
+
+The production stage installs only production dependencies and runs the app in production mode.
+
+This reduces image size and improves performance.
+
+
 # 🚀 Getting started with Strapi
 
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
