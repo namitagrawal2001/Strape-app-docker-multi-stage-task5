@@ -1,3 +1,47 @@
+# 🐳 Dockerized Strapi Setup with PostgreSQL and Nginx
+
+This project includes a complete Docker Compose setup with:
+
+- User-defined Docker network (strapi-net)
+- PostgreSQL container with credentials
+- Strapi container connected via environment variables
+- Nginx reverse proxy (Port 80 → Strapi 1337)
+
+---
+
+## 🏗 Architecture
+
+Browser → Nginx (Port 80) → Strapi (Port 1337) → PostgreSQL (Port 5432)
+
+All three containers run on the same Docker bridge network.
+
+---
+
+## 🚀 How to Run the Project
+
+### 1. Navigate to Docker Setup Folder
+
+cd strapi-docker-setup
+
+
+### 2. Build and Start Containers
+
+docker compose up -d --build
+
+
+### 3. Verify Containers
+
+docker ps
+
+
+### 4. Access Admin Panel
+
+Open:
+
+http://localhost/admin
+
+
+
 #🐳 Docker Setup (Added by Me)
 #📦 Project Description
 
