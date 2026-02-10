@@ -25,6 +25,7 @@ COPY --from=build /app/build ./build
 COPY --from=build /app/config ./config
 COPY --from=build /app/src ./src
 COPY --from=build /app/public ./public
+COPY --from=build /app/favicon.png ./favicon.png
 
 EXPOSE 1337
 
